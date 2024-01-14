@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px;
+
+    
+    &__logo {
+        height: 68px;
+    }
+    &__nav {
+        &-active, &-link {
+            margin-left: 57px;
+            color: $primaryColor;
+            
+        }
+        &-active {
+            text-decoration: underline;
+        }
+        &-link {
+            text-decoration: none;
+        }
+    }   
+}
+
