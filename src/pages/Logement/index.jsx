@@ -3,7 +3,7 @@ import React from 'react'
 const Logement = () => {
   return (
     <div>
-      <h1>Kasa Acceuil</h1>
+      <h1>Page logement</h1>
     </div>
   )
 }

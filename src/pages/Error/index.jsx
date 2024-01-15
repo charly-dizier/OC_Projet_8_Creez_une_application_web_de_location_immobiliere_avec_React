@@ -3,7 +3,7 @@ import React from 'react'
 const Error = () => {
   return (
     <div>
-      <h1>Kasa Acceuil</h1>
+      <h1>Page Erreur</h1>
     </div>
   )
 }
