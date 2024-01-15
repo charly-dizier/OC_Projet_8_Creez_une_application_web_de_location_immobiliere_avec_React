@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&family=Shrikhand&display=swap');
+
+@mixin basic-font {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+}
+
+@mixin light-font {
+    @include basic-font;
+    font-weight: 500;
+}
+
+@mixin bold-font {
+    @include basic-font;
+    font-weight: 700;
+}

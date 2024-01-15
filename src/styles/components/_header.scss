@@ -1,14 +1,19 @@
 .header {
-    display: flex;
+    @include flex-item-center;
     justify-content: space-between;
-    align-items: center;
-    margin: 50px;
+    max-width: 1240px;
+    margin: auto;
+    padding-top: 45px;
+  
 
     
     &__logo {
         height: 68px;
+        color: $primaryColor;
     }
     &__nav {
+        @include light-font;
+        font-size: 24px;
         &-active, &-link {
             margin-left: 57px;
             color: $primaryColor;

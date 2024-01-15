@@ -1,0 +1,17 @@
+.footer {
+    @include flex-column-item-center;
+    background-color: $footerColor;
+    padding-top: 66px;
+    
+    &__logo {
+        height: 36px;
+        margin-bottom: 28px;
+
+    }
+    &__copyright {
+        @include light-font;
+        font-size: 24px;
+        color: $thirdColor;
+        margin-bottom: 29px;
+    }
+}

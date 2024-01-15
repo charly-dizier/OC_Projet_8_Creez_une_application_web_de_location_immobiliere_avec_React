@@ -1,0 +1,21 @@
+.error {
+    @include flex-column-item-center;
+    color: $primaryColor;
+    gap: 139px;
+    &__404 {
+        @include bold-font;
+        font-size: 228px;
+        line-height: 142.6%;
+    }
+    &__txt {
+        @include light-font;
+        font-size: 36px;
+        line-height: 142.6%;
+    }
+    &__link {
+        @include light-font;
+        font-size: 18px;
+        color: $primaryColor;
+        margin-bottom: 139px;
+    }
+}
