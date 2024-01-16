@@ -5,7 +5,10 @@ function Banner() {
     <section className="banner">
       <img className="banner__img" src={banner_img} alt="bord de mer" />
       <div className="banner__darkFilter"></div>
-      <p className="banner__txt">Chez vous, partout et ailleurs</p>
+      <p className="banner__txt">
+        Chez vous, <br className="banner__txt-breakpoint" />
+        partout et ailleurs
+      </p>
     </section>
   )
 }

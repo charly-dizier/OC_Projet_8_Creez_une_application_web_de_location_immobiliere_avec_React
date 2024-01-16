@@ -6,5 +6,12 @@
     gap: 50px;
     margin-top: 43px;
     padding: 50px;
-    
+    @include breakpoint {
+        grid-template-columns: auto;
+        justify-content: center;
+        background-color: $thirdColor;
+        gap: 20px;
+        margin-top: 22px;
+        padding: 0;
+    }
 }

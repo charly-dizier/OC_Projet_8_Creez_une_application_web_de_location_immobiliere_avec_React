@@ -8,7 +8,10 @@ function Footer() {
       <Link to="/">
         <img src={logo} alt="logo Kasa" className="footer__logo" />
       </Link>
-      <p className="footer__copyright">© 2020 Kasa. All rights reserved</p>
+      <p className="footer__copyright">
+        © 2020 Kasa. All <br className="footer__copyright-breakpoint" /> rights
+        reserved
+      </p>
     </footer>
   )
 }

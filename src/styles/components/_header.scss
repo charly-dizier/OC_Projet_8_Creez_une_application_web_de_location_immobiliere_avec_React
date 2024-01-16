@@ -3,20 +3,28 @@
     justify-content: space-between;
     max-width: 1240px;
     margin: auto;
-    padding-top: 45px;
-  
-
-    
+    padding: 45px 7% 0 7%;
+    @include breakpoint {
+        padding: 20px 3% 0 3%;
+    }
     &__logo {
         height: 68px;
         color: $primaryColor;
+        @include breakpoint {
+            height: 47px;
+        }
     }
     &__nav {
         @include font(24px, 500);
+        @include breakpoint {
+            font-size: 12px;
+        }
         &-active, &-link {
             margin-left: 57px;
             color: $primaryColor;
-            
+            @include breakpoint {
+                margin-left: 26px;
+            }
         }
         &-active {
             text-decoration: underline;
@@ -26,4 +34,3 @@
         }
     }   
 }
-

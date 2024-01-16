@@ -2,20 +2,30 @@
     @include flex-column-item-center;
     color: $primaryColor;
     gap: 139px;
+    text-align: center;
+    @include breakpoint {
+        gap: 113px;
+        margin-top: 113px;
+        padding: 0 5%;
+    }
     &__404 {
         @include font(228px, 700);
-        font-size: 228px;
-        
+        @include breakpoint {
+            font-size: 96px;
+        } 
     }
     &__txt {
         @include font(36px, 500);
-
-        
+        @include breakpoint {
+            font-size: 18px;
+        }
     }
     &__link {
         @include font(18px, 500);
-
         color: $primaryColor;
         margin-bottom: 139px;
+        @include breakpoint {
+            font-size: 14px;
+        }
     }
 }

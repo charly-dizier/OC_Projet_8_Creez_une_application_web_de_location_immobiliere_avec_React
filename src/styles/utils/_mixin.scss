@@ -27,3 +27,9 @@
     @include column;
     @include item-center;
 }
+
+@mixin breakpoint {
+    @media screen and (max-width: 800px) {
+        @content;
+    }
+}

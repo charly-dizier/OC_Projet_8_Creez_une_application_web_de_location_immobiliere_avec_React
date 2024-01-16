@@ -2,15 +2,25 @@
     @include flex-column-item-center;
     background-color: $footerColor;
     padding-top: 66px;
-    
     &__logo {
         height: 36px;
         margin-bottom: 28px;
-
+        @include breakpoint {
+            margin-bottom: 15px;
+        }
     }
     &__copyright {
         @include font(24px, 500);
         color: $thirdColor;
         margin-bottom: 29px;
+        &-breakpoint {
+            display: none;
+            @include breakpoint {
+                display: block;
+            }
+        }
+        @include breakpoint {
+            font-size: 12px;
+        }
     }
 }
