@@ -12,8 +12,7 @@
         color: $primaryColor;
     }
     &__nav {
-        @include light-font;
-        font-size: 24px;
+        @include font(24px, 500);
         &-active, &-link {
             margin-left: 57px;
             color: $primaryColor;

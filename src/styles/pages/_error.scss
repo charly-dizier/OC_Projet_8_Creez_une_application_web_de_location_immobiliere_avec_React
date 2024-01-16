@@ -3,18 +3,18 @@
     color: $primaryColor;
     gap: 139px;
     &__404 {
-        @include bold-font;
+        @include font(228px, 700);
         font-size: 228px;
-        line-height: 142.6%;
+        
     }
     &__txt {
-        @include light-font;
-        font-size: 36px;
-        line-height: 142.6%;
+        @include font(36px, 500);
+
+        
     }
     &__link {
-        @include light-font;
-        font-size: 18px;
+        @include font(18px, 500);
+
         color: $primaryColor;
         margin-bottom: 139px;
     }

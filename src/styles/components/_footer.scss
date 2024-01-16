@@ -9,8 +9,7 @@
 
     }
     &__copyright {
-        @include light-font;
-        font-size: 24px;
+        @include font(24px, 500);
         color: $thirdColor;
         margin-bottom: 29px;
     }

@@ -6,12 +6,8 @@
     line-height: 142.6%
 }
 
-@mixin light-font {
+@mixin font($size, $weight) {
     @include basic-font;
-    font-weight: 500;
-}
-
-@mixin bold-font {
-    @include basic-font;
-    font-weight: 700;
+    font-size: $size;
+    font-weight: $weight;
 }

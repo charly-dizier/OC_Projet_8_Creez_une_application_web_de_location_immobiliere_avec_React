@@ -22,8 +22,7 @@
         position: absolute;
     }
     &__txt {
-        @include light-font;
-        font-size: 48px;
+        @include font(48px, 500);
         color: $thirdColor;
         position: absolute;
         top: 24%;

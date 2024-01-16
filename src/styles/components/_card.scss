@@ -1,5 +1,5 @@
 .card {
-    background-image: linear-gradient(to top, #863535, #ff6060);
+    background-image: $linearRedGradient;
     border-radius: 10px;
     display: flex;
     background-size: cover;
@@ -20,8 +20,7 @@
         position: absolute;
         bottom: 20px;
         margin-left: 20px;
-        @include light-font;
-        font-size: 18px;
+        @include font(18px, 500);
         color: $thirdColor;
     }
 }
