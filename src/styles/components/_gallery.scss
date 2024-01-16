@@ -1,0 +1,9 @@
+.gallery {
+    background-color:$secondaryColor;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+    margin-top: 43px;
+    padding: 50px;
+}

@@ -1,9 +1,15 @@
 import Banner from '../../components/Banner/index'
+import Gallery from '../../components/Gallery'
 
 function Home() {
   document.title = 'Acceuil - Kasa'
 
-  return <Banner />
+  return (
+    <div className="homePage">
+      <Banner />
+      <Gallery />
+    </div>
+  )
 }
 
 export default Home
