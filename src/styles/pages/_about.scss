@@ -1,0 +1,9 @@
+.aboutPage {
+    max-width: 1240px;
+    margin: 50px auto;
+    padding: 0 7%;
+    @include breakpoint {
+        margin: 27px auto;
+        padding: 0 3%;
+    }
+}

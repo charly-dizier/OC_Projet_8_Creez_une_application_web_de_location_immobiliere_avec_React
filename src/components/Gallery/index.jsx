@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from '../Card'
-import data from '../../utils/data.json'
+import data from '../../utils/data/data.json'
 
 function Gallery() {
   return (

@@ -1,0 +1,43 @@
+.collapse {
+  display: flex;
+  margin-top: 38px;
+  &__dropdown {
+    @include flex-column;
+    width: 100%;
+    gap: 30px;
+    &--containerTitle {
+      @include flex-between;
+      padding: 10px 15px;
+      background-color: $primaryColor;
+      border-radius: 5px;
+    }
+    &--title {
+      @include font(24px, 500);
+      color: $thirdColor;
+    }
+    &--icon {
+      transform: rotate(0deg);
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    &--containerContent {
+      @include font(20px, 400);
+      border-radius: 5px;
+      background-color: $secondaryColor;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out, height 0.4s 0.4s ease-in-out;
+    }
+    &--content {
+      padding: 20px;
+    }
+  }
+}
+
+.animated {
+  opacity: 1;
+  transition: height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+.rotated {
+  transform: rotate(-180deg);
+  transition: 0.3s ease-in-out;
+}

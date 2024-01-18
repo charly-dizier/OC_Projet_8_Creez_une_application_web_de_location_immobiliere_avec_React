@@ -1,11 +1,28 @@
 import React from 'react'
+import Banner from '../../components/Banner'
+import bannerAbout_img from '../../assets/img/bannerAbout_img.png'
+import Collapse from '../../components/Collapse'
+import dataAbout from '../../utils/data/dataAbout.json'
 
-const About = () => {
-  document.title = 'A Propos - Kasa'
+function About() {
+  document.title = 'A propos - Kasa'
 
   return (
-    <div>
-      <h1>Page A Propos</h1>
+    <div className="aboutPage">
+      <Banner img={bannerAbout_img} alt="Paysage montagne" title="" />
+      <section className="collapse">
+        <div className="collapse__dropdown">
+          {dataAbout.map((data) => {
+            return (
+              <Collapse
+                key={data.id}
+                title={data.title}
+                content={data.content}
+              />
+            )
+          })}
+        </div>
+      </section>
     </div>
   )
 }
