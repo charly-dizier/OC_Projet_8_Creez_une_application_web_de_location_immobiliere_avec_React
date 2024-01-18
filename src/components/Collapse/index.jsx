@@ -9,7 +9,7 @@ function Collapse({ title, content }) {
   }
 
   return (
-    <collapse>
+    <article>
       <div className="collapse__dropdown--containerTitle">
         <h2 className="collapse__dropdown--title">{title}</h2>
         <img
@@ -32,7 +32,7 @@ function Collapse({ title, content }) {
       >
         {toggle && <p className="collapse__dropdown--content">{content}</p>}
       </div>
-    </collapse>
+    </article>
   )
 }
 

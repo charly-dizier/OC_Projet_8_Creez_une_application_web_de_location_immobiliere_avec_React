@@ -1,24 +1,39 @@
 .collapse {
   display: flex;
+  margin: auto;
   margin-top: 38px;
+  max-width: 1023px;
+  @include breakpoint {
+    margin-top: 19px;
+  }
   &__dropdown {
     @include flex-column;
     width: 100%;
     gap: 30px;
+    @include breakpoint {
+      gap: 19px;
+    }
     &--containerTitle {
       @include flex-between;
       padding: 10px 15px;
       background-color: $primaryColor;
       border-radius: 5px;
+      align-items: center;
     }
     &--title {
       @include font(24px, 500);
       color: $thirdColor;
+      @include breakpoint {
+        font-size: 13px;
+      }
     }
     &--icon {
       transform: rotate(0deg);
       transition: 0.3s ease-in-out;
       cursor: pointer;
+      @include breakpoint {
+        width: 30px;
+      }
     }
     &--containerContent {
       @include font(20px, 400);
@@ -26,6 +41,9 @@
       background-color: $secondaryColor;
       opacity: 0;
       transition: opacity 0.4s ease-in-out, height 0.4s 0.4s ease-in-out;
+      @include breakpoint {
+        font-size: 12px;
+      }
     }
     &--content {
       padding: 20px;
