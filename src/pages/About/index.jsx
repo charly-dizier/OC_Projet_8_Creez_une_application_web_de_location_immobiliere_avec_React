@@ -8,7 +8,7 @@ function About() {
   document.title = 'A propos - Kasa'
 
   return (
-    <div className="aboutPage">
+    <main className="aboutPage">
       <Banner img={bannerAbout_img} alt="Paysage montagne" title="" />
       <section className="collapse">
         <div className="collapse__dropdown">
@@ -23,7 +23,7 @@ function About() {
           })}
         </div>
       </section>
-    </div>
+    </main>
   )
 }
 

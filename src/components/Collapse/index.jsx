@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Chevron from '../../assets/logo/chevron.svg'
+import chevron from '../../assets/logo/chevron.svg'
 
 function Collapse({ title, content }) {
   const [toggle, setToggle] = useState(false)
@@ -19,7 +19,7 @@ function Collapse({ title, content }) {
               : 'collapse__dropdown--icon'
           }
           onClick={toggleCollapse}
-          src={Chevron}
+          src={chevron}
           alt="chevron"
         />
       </div>

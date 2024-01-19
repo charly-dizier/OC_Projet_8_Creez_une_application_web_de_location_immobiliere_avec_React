@@ -6,7 +6,7 @@ function Home() {
   document.title = 'Acceuil - Kasa'
 
   return (
-    <div className="homePage">
+    <main className="homePage">
       <Banner
         img={bannerHome_img}
         alt="Bord de mer"
@@ -14,7 +14,7 @@ function Home() {
         partout et ailleurs"
       />
       <Gallery />
-    </div>
+    </main>
   )
 }
 

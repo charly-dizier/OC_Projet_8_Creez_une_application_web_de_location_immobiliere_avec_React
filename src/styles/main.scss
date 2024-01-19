@@ -1,18 +1,18 @@
+@import './utils/colors';
+@import './utils/font';
+@import './utils/mixin';
 
-@import "./utils/colors";
-@import "./utils/font";
-@import "./utils/mixin";
+@import './base/base';
 
-@import "./base/base";
+@import './components/header';
+@import './components/footer';
+@import './components/banner';
+@import './components/card';
+@import './components/gallery';
+@import './components/collapse';
+@import './components/slider';
 
-@import "./components/header";
-@import "./components/footer";
-@import "./components/banner";
-@import "./components/card";
-@import "./components/gallery";
-@import "./components/collapse";
-
-@import "./pages/home";
-@import "./pages/logement";
-@import "./pages/about";
-@import "./pages/error";
+@import './pages/home';
+@import './pages/accomodation';
+@import './pages/about';
+@import './pages/error';

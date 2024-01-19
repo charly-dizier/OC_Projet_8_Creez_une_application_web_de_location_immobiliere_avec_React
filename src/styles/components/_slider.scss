@@ -1,0 +1,17 @@
+.slider {
+  position: relative;
+  border-radius: 25px;
+  background-position: center;
+  background-size: cover;
+  height: 415px;
+  object-fit: cover;
+  width: 100%;
+  align-items: center;
+  // justify-content: center;
+  display: flex;
+  justify-content: space-between;
+  &__arrowIcon {
+    cursor: pointer;
+    margin: 0 2%;
+  }
+}

@@ -37,6 +37,7 @@
     }
     &--containerContent {
       @include font(20px, 400);
+      color: $primaryColor;
       border-radius: 5px;
       background-color: $secondaryColor;
       opacity: 0;

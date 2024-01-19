@@ -1,0 +1,85 @@
+.accomodation {
+  display: flex;
+  flex-direction: column;
+  max-width: 1240px;
+  margin: 50px auto;
+  padding: 0 7%;
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    &--container {
+      display: flex;
+      flex-direction: column;
+    }
+    &--title {
+      @include font(36px, 500);
+      color: $primaryColor;
+    }
+    &--location {
+      @include font(18px, 500);
+      color: $primaryColor;
+    }
+    &--tagsContainer {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    &--tags {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include font(14px, 500);
+      color: $thirdColor;
+      background-color: $primaryColor;
+      border-radius: 10px;
+      height: 25px;
+      min-width: 115px;
+      padding: 0 10px;
+    }
+    &--host-rating {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
+    &--host {
+      display: flex;
+      align-items: center;
+      text-align: right;
+      gap: 10px;
+      &-name {
+        display: flex;
+        flex-direction: column;
+
+        @include font(18px, 500);
+
+        color: $primaryColor;
+      }
+      &-picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+      }
+    }
+    &--rating {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 21px;
+      gap: 15px;
+      &-star {
+      }
+    }
+  }
+  &__collapse {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 70px;
+    & article {
+      width: 50%;
+    }
+    & span {
+      display: flex;
+    }
+  }
+}
