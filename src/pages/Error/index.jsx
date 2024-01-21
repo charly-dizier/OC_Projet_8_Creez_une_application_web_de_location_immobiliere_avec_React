@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 function Error() {
+  document.title = 'Erreur 404 (Page non trouvé) - Kasa'
   return (
     <section className="error">
       <p className="error__404">404</p>

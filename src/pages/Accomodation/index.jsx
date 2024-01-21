@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import data from '../../utils/data/data.json'
 import Slider from '../../components/Slider'
 import redStar from '../../assets/logo/redStar.svg'
@@ -9,24 +9,34 @@ import Collapse from '../../components/Collapse'
 function Accomodation() {
   document.title = 'Logement - Kasa'
 
+  const navigate = useNavigate()
   const [imageSlider, setImageSlider] = useState([])
   const { id } = useParams()
 
-  const dataLogement = data.filter((data) => data.id === id)
-  const currentData = dataLogement[0]
+  //On parcour le fichier data et on inject dans dataAccomodation uniquement les éléments souhaité
+  const dataAccomodation = data.filter((data) => data.id === id)
 
-  const name = currentData.host.name.split(' ') //On split name pour l'afficher dans des span différent
-
+  //Si le tableau dataAccomodation est vide, on est renvoyer à la page Error
   useEffect(() => {
-    if (dataLogement.length > 0) {
+    if (dataAccomodation.length === 0) {
+      navigate('/Error')
+    } else {
+      const currentData = dataAccomodation[0]
       setImageSlider(currentData.pictures)
     }
-  }, [id, dataLogement, currentData.pictures])
+  }, [id, dataAccomodation, navigate])
+
+  //Ne rien faire si aucune données est trouvé, la redirection à déjà été effectué
+  if (dataAccomodation.length === 0) {
+    return null
+  }
+
+  const currentData = dataAccomodation[0]
+  const name = currentData.host.name.split(' ') //On split name pour l'afficher dans des span différent
 
   return (
     <main className="accomodation">
       <Slider imageSlider={imageSlider} />
-
       <section className="accomodation__info">
         <div className="accomodation__info--container">
           <h1 className="accomodation__info--title">{currentData.title}</h1>
@@ -49,7 +59,7 @@ function Accomodation() {
               <span>{name[1]}</span>
             </div>
             <img
-              src={currentData.host.picture}
+              src={currentData.host?.picture}
               alt={name}
               className="accomodation__info--host-picture"
             />
