@@ -4,7 +4,7 @@ import chevron from '../../assets/logo/chevron.svg'
 function Collapse({ title, content }) {
   const [toggle, setToggle] = useState(false)
 
-  function toggleCollapse() {
+  const toggleCollapse = () => {
     setToggle(!toggle)
   }
 

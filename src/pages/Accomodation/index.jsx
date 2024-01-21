@@ -8,26 +8,20 @@ import Collapse from '../../components/Collapse'
 
 function Accomodation() {
   document.title = 'Logement - Kasa'
-  const [imageSlider, setImageSlider] = useState([])
 
+  const [imageSlider, setImageSlider] = useState([])
   const { id } = useParams()
+
   const dataLogement = data.filter((data) => data.id === id)
   const currentData = dataLogement[0]
 
-  const title = currentData.title
-  const location = currentData.location
-  const name = currentData.host.name.split()
-  const hostPicture = currentData.host.picture
-  const tags = currentData.tags
-  const rating = currentData.rating
-  const description = currentData.description
-  const equipments = currentData.equipments
+  const name = currentData.host.name.split(' ') //On split name pour l'afficher dans des span différent
 
   useEffect(() => {
     if (dataLogement.length > 0) {
       setImageSlider(currentData.pictures)
     }
-  }, [id, dataLogement])
+  }, [id, dataLogement, currentData.pictures])
 
   return (
     <main className="accomodation">
@@ -35,10 +29,10 @@ function Accomodation() {
 
       <section className="accomodation__info">
         <div className="accomodation__info--container">
-          <h1 className="accomodation__info--title">{title}</h1>
-          <p className="accomodation__info--location">{location}</p>
+          <h1 className="accomodation__info--title">{currentData.title}</h1>
+          <p className="accomodation__info--location">{currentData.location}</p>
           <div className="accomodation__info--tagsContainer">
-            {tags.map((tag, index) => {
+            {currentData.tags.map((tag, index) => {
               return (
                 <p key={index} className="accomodation__info--tags">
                   {tag}
@@ -51,11 +45,11 @@ function Accomodation() {
           {' '}
           <div className="accomodation__info--host">
             <div className="accomodation__info--host-name">
-              {/* besoin de split le nom */}
               <span>{name[0]}</span>
+              <span>{name[1]}</span>
             </div>
             <img
-              src={hostPicture}
+              src={currentData.host.picture}
               alt={name}
               className="accomodation__info--host-picture"
             />
@@ -66,7 +60,7 @@ function Accomodation() {
               return (
                 <img
                   key={index}
-                  src={ratingValue <= rating ? redStar : greyStar}
+                  src={ratingValue <= currentData.rating ? redStar : greyStar}
                   alt="star"
                   className="accomodation__info--rating-star"
                 />
@@ -76,10 +70,10 @@ function Accomodation() {
         </div>
       </section>
       <section className="accomodation__collapse">
-        <Collapse title="Description" content={description} />
+        <Collapse title="Description" content={currentData.description} />
         <Collapse
           title="Equipements"
-          content={equipments.map((equipment, index) => {
+          content={currentData.equipments.map((equipment, index) => {
             return <span key={index}>{equipment}</span>
           })}
         />
