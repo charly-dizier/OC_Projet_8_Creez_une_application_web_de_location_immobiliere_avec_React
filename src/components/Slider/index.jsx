@@ -20,20 +20,26 @@ function Slider({ imageSlider }) {
       style={{ backgroundImage: `url(${imageSlider[currentIndex]})` }}
       className="slider"
     >
+      {/* Si le tableau contien minimum 2 image */}
       {imageSlider.length > 1 && (
         <>
-          <img
-            className="slider__arrowIcon arrow-prev"
-            src={ArrowPrev}
-            alt="icon flèche précédente"
-            onClick={prevSlide}
-          />
-          <img
-            className="slider__arrowIcon arrow-next"
-            src={ArrowNext}
-            alt="icon flèche suivante"
-            onClick={nextSlide}
-          />
+          <>
+            <img
+              className="slider__arrowIcon arrow-prev"
+              src={ArrowPrev}
+              alt="icon flèche précédente"
+              onClick={prevSlide}
+            />
+            <img
+              className="slider__arrowIcon arrow-next"
+              src={ArrowNext}
+              alt="icon flèche suivante"
+              onClick={nextSlide}
+            />
+          </>
+          <p className="slider__compter">
+            {currentIndex + 1} / {imageSlider.length}
+          </p>
         </>
       )}
     </section>

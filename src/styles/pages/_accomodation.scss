@@ -4,26 +4,47 @@
   max-width: 1240px;
   margin: 50px auto;
   padding: 0 7%;
+  @include breakpoint {
+    padding: 0 3%;
+    margin: 27px auto;
+  }
   &__info {
     display: flex;
     justify-content: space-between;
     margin: 30px 0;
+    @include breakpoint {
+      flex-direction: column;
+      margin: 15px 0;
+    }
     &--container {
       display: flex;
       flex-direction: column;
+      @include breakpoint {
+        gap: 5px;
+      }
     }
     &--title {
       @include font(36px, 500);
       color: $primaryColor;
+      @include breakpoint {
+        font-size: 18px;
+      }
     }
     &--location {
       @include font(18px, 500);
       color: $primaryColor;
+      @include breakpoint {
+        font-size: 14px;
+      }
     }
     &--tagsContainer {
       display: flex;
       gap: 10px;
       margin-top: 20px;
+      @include breakpoint {
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
     }
     &--tags {
       display: flex;
@@ -36,11 +57,21 @@
       height: 25px;
       min-width: 115px;
       padding: 0 10px;
+      @include breakpoint {
+        font-size: 10px;
+        min-width: 87px;
+      }
     }
     &--host-rating {
       display: flex;
       flex-direction: column;
       align-items: end;
+      @include breakpoint {
+        flex-direction: row-reverse;
+        align-items: normal;
+        justify-content: space-between;
+        margin: 15px 0;
+      }
     }
     &--host {
       display: flex;
@@ -50,15 +81,20 @@
       &-name {
         display: flex;
         flex-direction: column;
-
         @include font(18px, 500);
-
         color: $primaryColor;
+        @include breakpoint {
+          font-size: 12px;
+        }
       }
       &-picture {
         width: 64px;
         height: 64px;
         border-radius: 50%;
+        @include breakpoint {
+          width: 32px;
+          height: 32px;
+        }
       }
     }
     &--rating {
@@ -66,7 +102,15 @@
       justify-content: space-between;
       margin-top: 21px;
       gap: 15px;
-      &-star {
+      @include breakpoint {
+        margin-top: 0;
+        align-items: center;
+        gap: 10px;
+      }
+      & img {
+        @include breakpoint {
+          height: 18px;
+        }
       }
     }
   }
@@ -75,8 +119,15 @@
     justify-content: space-between;
     width: 100%;
     gap: 70px;
+    @include breakpoint {
+      flex-direction: column;
+      gap: 20px;
+    }
     & article {
       width: 50%;
+      @include breakpoint {
+        width: 100%;
+      }
     }
     & span {
       display: flex;

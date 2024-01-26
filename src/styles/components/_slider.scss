@@ -10,8 +10,26 @@
   // justify-content: center;
   display: flex;
   justify-content: space-between;
+  @include breakpoint {
+    height: 255px;
+  }
   &__arrowIcon {
     cursor: pointer;
     margin: 0 2%;
+    @include breakpoint {
+      height: 24px;
+      width: 24px;
+    }
+  }
+  &__compter {
+    @include font(18px, 500);
+    color: $thirdColor;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%);
+    @include breakpoint {
+      display: none;
+    }
   }
 }

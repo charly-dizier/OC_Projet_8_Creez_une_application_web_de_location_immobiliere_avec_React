@@ -16,15 +16,17 @@ function Accomodation() {
   //On parcour le fichier data et on inject dans dataAccomodation uniquement les éléments souhaité
   const dataAccomodation = data.filter((data) => data.id === id)
 
-  //Si le tableau dataAccomodation est vide, on est renvoyer à la page Error
   useEffect(() => {
+    //Si le tableau dataAccomodation est vide, on est renvoyer à la page Error
     if (dataAccomodation.length === 0) {
       navigate('/Error')
+      //Sinon on crée currentData et on détermine le contenue de imageSlider grace a setImageSlider
     } else {
       const currentData = dataAccomodation[0]
       setImageSlider(currentData.pictures)
     }
-  }, [id, dataAccomodation, navigate])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id, dataAccomodation])
 
   //Ne rien faire si aucune données est trouvé, la redirection à déjà été effectué
   if (dataAccomodation.length === 0) {

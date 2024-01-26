@@ -19,6 +19,10 @@
       background-color: $primaryColor;
       border-radius: 5px;
       align-items: center;
+      height: 50px;
+      @include breakpoint {
+        height: 30px;
+      }
     }
     &--title {
       @include font(24px, 500);
