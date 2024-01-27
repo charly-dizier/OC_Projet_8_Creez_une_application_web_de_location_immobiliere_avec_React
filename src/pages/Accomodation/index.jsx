@@ -1,29 +1,34 @@
+//Importation des hooks
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+//importation du fichier de données
 import data from '../../utils/data/data.json'
+//importation des composants nécéssaire
 import Slider from '../../components/Slider'
+import Collapse from '../../components/Collapse'
+//importation des assets
 import redStar from '../../assets/logo/redStar.svg'
 import greyStar from '../../assets/logo/greyStar.svg'
-import Collapse from '../../components/Collapse'
 
 function Accomodation() {
+  //Mise à jour du titre de la page
   document.title = 'Logement - Kasa'
 
+  //initialisation des hooks
   const navigate = useNavigate()
   const [imageSlider, setImageSlider] = useState([])
   const { id } = useParams()
 
-  //On parcour le fichier data et on inject dans dataAccomodation uniquement les éléments souhaité
+  //Filtrage des données pour n'inclure que celles correspondant à l'ID de l'URL
   const dataAccomodation = data.filter((data) => data.id === id)
 
   useEffect(() => {
-    //Si le tableau dataAccomodation est vide, on est renvoyer à la page Error
+    //Si le tableau dataAccomodation est vide, redirection vers la page Error
     if (dataAccomodation.length === 0) {
       navigate('/Error')
-      //Sinon on crée currentData et on détermine le contenue de imageSlider grace a setImageSlider
     } else {
-      const currentData = dataAccomodation[0]
-      setImageSlider(currentData.pictures)
+      // Si des données sont trouvées, mise à jour du state des images du slider
+      setImageSlider(dataAccomodation[0].pictures)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, dataAccomodation])
@@ -33,9 +38,12 @@ function Accomodation() {
     return null
   }
 
+  //Création de currentData comme étant la première itératino du tableau dataAccomodation
   const currentData = dataAccomodation[0]
-  const name = currentData.host.name.split(' ') //On split name pour l'afficher dans des span différent
+  //On split name pour l'afficher dans des span différent
+  const name = currentData.host.name.split(' ')
 
+  //Rendu JSX (DOM virtuel)
   return (
     <main className="accomodation">
       <Slider imageSlider={imageSlider} />

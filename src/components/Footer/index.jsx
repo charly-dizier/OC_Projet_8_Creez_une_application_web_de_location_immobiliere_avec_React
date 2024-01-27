@@ -1,8 +1,10 @@
+//Importation de Link pour gérer la navigation entre les pages
 import { Link } from 'react-router-dom'
-
+//importation des assets
 import logo from '../../assets/logo/logo-footer.svg'
 
 function Footer() {
+  //Rendu JSX (DOM virtuel)
   return (
     <footer className="footer">
       <Link to="/">

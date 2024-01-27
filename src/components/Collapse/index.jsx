@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
+//Importation des hooks
+import { useState } from 'react'
+//Importation des assets
 import chevron from '../../assets/logo/chevron.svg'
 
 function Collapse({ title, content }) {
+  //Initialisation du hooks (booléen)
   const [toggle, setToggle] = useState(false)
 
+  //Fonction qui switch la valeur booléene de toggle
   const toggleCollapse = () => {
     setToggle(!toggle)
   }
 
+  //Rendu JSX (DOM virtuel)
   return (
     <article>
       <div className="collapse__dropdown--containerTitle">

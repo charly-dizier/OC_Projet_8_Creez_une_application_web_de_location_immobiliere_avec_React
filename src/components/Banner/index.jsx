@@ -1,4 +1,5 @@
 function Banner({ img, alt, txt }) {
+  //Rendu JSX (DOM virtuel)
   return (
     <section className="banner">
       <img className="banner__img" src={img} alt={alt} />

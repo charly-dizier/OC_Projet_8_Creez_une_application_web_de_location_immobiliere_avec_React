@@ -1,7 +1,8 @@
-import React from 'react'
+//Importation de Link pour gérer la navigation entre les pages
 import { Link } from 'react-router-dom'
 
 function Card({ id, title, cover }) {
+  //Rendu JSX (DOM virtuel)
   return (
     <Link to={`/Accomodation/${id}`}>
       <div className="card">

@@ -1,10 +1,13 @@
-import React from 'react'
+//importation des composants nécéssaire
 import Card from '../Card'
+//importation du fichier de données
 import data from '../../utils/data/data.json'
 
 function Gallery() {
+  //Rendu JSX (DOM virtuel)
   return (
     <section className="gallery">
+      {/* Mapping des données de data pour créer une Card pour chaque élément */}
       {data.map((data) => {
         return (
           <Card

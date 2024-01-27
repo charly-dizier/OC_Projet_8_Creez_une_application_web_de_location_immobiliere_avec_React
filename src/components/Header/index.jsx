@@ -1,8 +1,10 @@
+//Importation des hooks
 import { NavLink, Link } from 'react-router-dom'
-
+//importation des assets
 import logo from '../../assets/logo/logo-header.svg'
 
 function Header() {
+  //Rendu JSX (DOM virtuel)
   return (
     <header className="header">
       <Link to="/">

@@ -1,12 +1,16 @@
-import React from 'react'
+//importation des composants nécéssaire
 import Banner from '../../components/Banner'
-import bannerAbout_img from '../../assets/img/bannerAbout_img.png'
 import Collapse from '../../components/Collapse'
+//importation des assets
+import bannerAbout_img from '../../assets/img/bannerAbout_img.png'
+//importation du fichier de données
 import dataAbout from '../../utils/data/dataAbout.json'
 
 function About() {
+  //Mise à jour du titre de la page
   document.title = 'A propos - Kasa'
 
+  //Rendu JSX (DOM virtuel)
   return (
     <main className="aboutPage">
       <Banner img={bannerAbout_img} alt="Paysage montagne" title="" />
