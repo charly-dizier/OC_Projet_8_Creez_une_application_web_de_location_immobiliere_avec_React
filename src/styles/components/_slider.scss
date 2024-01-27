@@ -1,4 +1,5 @@
 .slider {
+  @include flex-item-center;
   position: relative;
   border-radius: 25px;
   background-position: center;
@@ -6,9 +7,6 @@
   height: 415px;
   object-fit: cover;
   width: 100%;
-  align-items: center;
-  // justify-content: center;
-  display: flex;
   justify-content: space-between;
   @include breakpoint {
     height: 255px;

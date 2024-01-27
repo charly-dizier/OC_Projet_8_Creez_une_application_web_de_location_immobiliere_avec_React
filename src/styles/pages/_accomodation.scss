@@ -1,6 +1,5 @@
 .accomodation {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   max-width: 1240px;
   margin: 50px auto;
   padding: 0 7%;
@@ -9,16 +8,14 @@
     margin: 27px auto;
   }
   &__info {
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
     margin: 30px 0;
     @include breakpoint {
       flex-direction: column;
       margin: 15px 0;
     }
     &--container {
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
       @include breakpoint {
         gap: 5px;
       }
@@ -47,9 +44,7 @@
       }
     }
     &--tags {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-full-center;
       @include font(14px, 500);
       color: $thirdColor;
       background-color: $primaryColor;
@@ -63,8 +58,7 @@
       }
     }
     &--host-rating {
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
       align-items: end;
       @include breakpoint {
         flex-direction: row-reverse;
@@ -74,13 +68,11 @@
       }
     }
     &--host {
-      display: flex;
-      align-items: center;
+      @include flex-item-center;
       text-align: right;
       gap: 10px;
       &-name {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         @include font(18px, 500);
         color: $primaryColor;
         @include breakpoint {
@@ -98,8 +90,7 @@
       }
     }
     &--rating {
-      display: flex;
-      justify-content: space-between;
+      @include flex-between;
       margin-top: 21px;
       gap: 15px;
       @include breakpoint {
@@ -115,8 +106,7 @@
     }
   }
   &__collapse {
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
     width: 100%;
     gap: 70px;
     @include breakpoint {
