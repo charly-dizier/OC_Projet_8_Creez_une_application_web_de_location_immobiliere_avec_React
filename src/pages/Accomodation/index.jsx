@@ -75,11 +75,14 @@ function Accomodation() {
             />
           </div>
           <div className="accomodation__info--rating">
-            {[...Array(5)].map((star, index) => {
+            {/* Création d'un tableau contenant 5 itération et boucle de rendu pour chaque itération */}
+            {[...Array(5)].map((_, index) => {
+              //creation d'une valeur de notation allant de 1 à 5
               const ratingValue = index + 1
               return (
                 <img
                   key={index}
+                  //Si la note est atteint ou dépaser, on affiche une etoile rouge, sinon une grise
                   src={ratingValue <= currentData.rating ? redStar : greyStar}
                   alt="star"
                   className="accomodation__info--rating-star"
